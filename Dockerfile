@@ -4,7 +4,7 @@
 # ------------------------------------------------------------------------------------------
 # Dockerfile for krach2025-poremaps: A Docker container for poremaps simulation environment.
 # 
-# This Dockerfile builds a container based on `phusion/baseimage:jammy-1.0.4df`, 
+# This Dockerfile builds a container based on `phusion/baseimage:jammy-1.0.4`, 
 # which is an Ubuntu LTS image optimized for Docker.
 # The container is configured to:
 # - Install system dependencies for poremaps and OpenMPI.
@@ -14,7 +14,7 @@
 # - Set up shared volumes for host-container communication.
 
 # Base Image:
-# - `phusion/baseimage:jammy-1.0.4df`: Ubuntu 22.04 LTS with Docker optimizations.
+# - `phusion/baseimage:jammy-1.0.4`: Ubuntu 22.04 LTS with Docker optimizations.
 #   See: https://github.com/phusion/baseimage-docker
 
 # Author:
@@ -22,9 +22,9 @@
 
 # ------------------------------------------------------------------------------------------
 
-# Use phusion/baseimage:jammy-1.0.4df as the base image
+# Use phusion/baseimage:jammy-1.0.4 as the base image
 # This image is Ubuntu LTS optimized for Docker compatibility
-FROM phusion/baseimage:jammy-1.0.4df
+FROM phusion/baseimage:jammy-1.0.4
 
 # Set metadata for the image
 LABEL org.opencontainers.image.authors="david.krach@mib.uni-stuttgart.de"

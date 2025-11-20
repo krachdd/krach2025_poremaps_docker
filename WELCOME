@@ -1,0 +1,13 @@
+*****************************************************************
+# SPDX-FileCopyrightInfo: Copyright © David Krach
+# SPDX-License-Identifier: MIT
+*****************************************************************
+Welcome to the Docker container of the poremaps Stokes solver!
+You can compile and execute the examples from within the build 
+tree of the module at /poremaps/src.
+For more information see the README.
+Note that the container does not have graphics support, but 
+copying the output (e.g. VTK files) to the folder 
+/poremaps/shared will make them available outside this container 
+on the host for display.
+*****************************************************************
