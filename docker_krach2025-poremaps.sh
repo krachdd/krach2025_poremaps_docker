@@ -62,6 +62,7 @@ open() {
 
     echo "Starting Docker container from image: $IMAGE"
     echo "Shared directory: $SHARED_DIR_HOST (host) -> $SHARED_DIR_CONTAINER (container)"
+    echo ""
 
     # Run the Docker container with:
     # - Interactive terminal (-it)
@@ -76,10 +77,30 @@ open() {
                "$IMAGE" /bin/bash
 }
 
+# Function to exec a Docker container
+# Arguments:
+#   $1: Docker image name (optional, defaults to $IMAGE_NAME)
+exec() {
+    local IMAGE="$1"
+    # Use default image if none is provided
+    IMAGE="${IMAGE:=$IMAGE_NAME}"
+
+    echo "Exec /bin/bash Docker container from image: $IMAGE"
+    echo "Shared directory: $SHARED_DIR_HOST (host) -> $SHARED_DIR_CONTAINER (container)"
+    echo ""
+    # Run the Docker container with:
+    # - Interactive terminal (-it)
+    # - Container name: krach2025-poremaps
+    # - Host user and group IDs for permission consistency
+    docker exec -u poremaps -it $IMAGE /bin/bash
+}
+
 # Main script logic
 if [ "$1" = "open" ]; then
     # Use provided image or default to IMAGE_NAME
     open "$2"
+elif [ "$1" = "exec" ]; then
+    exec "$2"
 elif [ "$1" = "help" ]; then
     help
 else
