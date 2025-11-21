@@ -95,7 +95,7 @@ RUN python3 -m venv /poremaps/venv/poremaps
 
 # Activate the virtual environment and install essential Python packages
 RUN ["/bin/bash", "-c", "source /poremaps/venv/poremaps/bin/activate"]
-RUN pip install numpy pyevtk
+RUN ["/bin/bash", "-c", "/poremaps/venv/poremaps/bin/pip install numpy pyevtk"]
 
 # --- Git Configuration ---
 # Set Git user for potential patch applications during installation
