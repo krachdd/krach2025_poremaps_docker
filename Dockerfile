@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightInfo: Copyright © David Krach
+# SPDX-FileCopyrightInfo: Copyright © David Krach <david.krach@mib.uni-stuttgart-de>
 # SPDX-License-Identifier: MIT
 
 # ------------------------------------------------------------------------------------------
